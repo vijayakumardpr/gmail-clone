@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header-navbar {
+  padding: 10px;
+  background-color: #f6f8fc;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.h-center {
+  justify-content: center;
+}
+
+.align-item {
+  align-items: center;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.searchbar {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 40%;
+  padding: 10px;
+  border-radius: 10000px;
+  background-color: #eaf1fb;
+}
+
+.searchbar > input {
+  border: none;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  background-color: #eaf1fb;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background-color: green;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 24px;
+}
+
+.aside {
+  padding: 10px;
+  width: 250px;
+  cursor: pointer;
+  background-color: #f6f8fc;
+}
+
+.aside_toggle {
+  padding: 10px;
+  width: 75px;
+  cursor: pointer;
+  background-color: #f6f8fc;
+}
+
+.compose_email {
+  background-color: lightskyblue;
+  padding: 1em;
+  border-radius: 1.1rem;
+  font-weight: bold;
+}
+
+.compose_email:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.sidebar_nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+.sidebar_nav > ul > li {
+  padding-left: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.sidebar_nav > ul > li:hover {
+  border-top-right-radius: 10000px;
+  border-bottom-right-radius: 10000px;
+  background-color: lightgray;
+}
+
+.selected {
+  border-top-right-radius: 10000px;
+  border-bottom-right-radius: 10000px;
+  background-color: lightsteelblue;
+}
+
+.home {
+  position: relative;
+  height: 85vh;
+  width: 95%;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding-bottom: 20px;
+  flex-grow: 1;
+}
+
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+  transition: all 500ms ease-in-out;
+}
+
+tr {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+tr:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+td {
+  padding: 12px 20px;
+}
+
+.pagination {
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #f2f6fc;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.message_content {
+  line-height: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.width_min-content {
+  width: min-content;
+  padding: 1em;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create_email {
+  position: fixed;
+  right: 30px;
+  bottom: 10px;
+  width: 450px;
+  height: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.create_email_header {
+  background-color: aliceblue;
+  padding: 5px 8px;
+  height: 10%;
+}
+
+.create_email_body {
+  height: 80%;
+  overflow-y: auto;
+}
+
+.create_email_footer {
+  background-color: lightcyan;
+  height: 10%;
+  padding: 5px;
+}
+
+.create_email_footer > div:first-child {
+  padding: 0.25em 1.25em;
+  background-color: blue;
+  border-radius: 100000px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email_input > input {
+  width: 100%;
+  padding: 10px;
+  font-size: inherit;
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  width: 100%;
+  height: 230px;
+  resize: none;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.model {
+  width: 1260px;
+  height: 550px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.navigation > div {
+  cursor: pointer;
+}
